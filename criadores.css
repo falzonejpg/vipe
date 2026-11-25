@@ -127,7 +127,7 @@ footer {
     animation-delay: calc(var(--i) * 70ms);
     background-image: url(./imagens/fotoparonamica.jpg);
     background-size: cover;
-    background-position: center 40%;
+    background-position: bottom;
 }
 
 
