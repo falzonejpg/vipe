@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="entrarContato.css">
+    <link rel="icon" href="imagens/LogoVP 1.png">
+    <title>VIPE: Entrar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Figtree:wght@400;500;700&display=swap"
+        rel="stylesheet">
+        <script src="entrarContato.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="imagens/LogoVP 1.png" alt="LogoVP">
+    </header>
+
+    <main class="login">
+        <h1 class="anima" style="--i:0">Seja Bem-Vindo</h1>
+        <p class="subtitulo anima" style="--i:1">Desejar entrar em contato?</p>
+
+        <form class="formulario" action="#" method="post">
+            <label class="campo anima" style="--i:2">
+                <!-- ícone de email -->
+                <img src="imagens/bi_person-fill.png" alt="">
+                <input type="text" name="text" placeholder="Nome Completo" id="nome" autocomplete="text" required>
+            </label>
+
+            <!-- ícone de whatsapp -->
+            <label class="campo anima" style="--i:3">
+                <img src="imagens/email.png" alt="" aria-hidden="true">
+                <input type="email" name="email" placeholder="Email" id="email" autocomplete="email" required>
+            </label>
+
+
+            <a href="" id="link" target="_blank"><button type="submit" class="botao entrar anima" style="--i:4" id="botao">ENTRAR</button></a>
+
+            <div class="divisor anima" style="--i:5">
+                <span></span>
+                <p>OU</p>
+                <span></span>
+            </div>
+
+            <a href="criadores.html" class="botao voltar anima" style="--i:6">
+                <!-- ícone de voltar -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M10 7l5 5-5 5M15 12H3" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 3h6a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-6" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" />
+                </svg>
+                VOLTAR
+            </a>
+        </form>
+
+        <p class="termos anima" style="--i:7">
+            Ao continuar, você concorda com nossos <br>
+            <a href="./documentos_utilidade/Termos_de_Uso.pdf" target="_blank">Termos de Uso</a> e <a href="./documentos_utilidade/Politica_de_Privacidade.pdf" target="_blank">Política de Privacidade</a>
+        </p>
+    </main>
+</body>
+
+</html>

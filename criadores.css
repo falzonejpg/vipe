@@ -1,0 +1,152 @@
+:root {
+    --fonte-menu-titulo: "Alegreya Sans", sans-serif;
+    --dourado: #cdb450;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--fonte-menu-titulo)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh                                                                                       ;
+    background-color: #1A1A1A;
+
+}
+
+.textoEquipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    color: white;
+    border-bottom: 1px solid #d9d9d9;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+
+.Sociais {
+    padding: 40px 0;
+    border-bottom: 1px solid #d9d9d9;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+
+.insta {
+    color: white;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+.Zap {
+    color: white;
+    margin-left: 55px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+
+}
+
+
+h2 {
+    color: white;
+    margin-left: 50px;
+
+}
+
+p {
+    color: white;
+
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    gap: 5px;
+    font-size: 3vh;
+
+}
+
+a {
+    text-decoration: none;
+    color: #cdb450;
+}
+
+.vida {
+    padding: 70px 70px 54px;
+    min-height: 301px;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+.vida h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: -3px;
+    margin-bottom: 12px;
+}
+
+.vida p {
+    font-size: 16px;
+    line-height: 19px;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+    background-image: url(./imagens/fotoparonamica.jpg);
+    background-size: cover;
+    background-position: center 40%;
+}
+
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px){
+.Zap {
+    margin-bottom: 20px;
+}
+
+
+}

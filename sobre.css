@@ -1,0 +1,194 @@
+:root {
+    --fonte-menu-titulo: "Alegreya Sans", sans-serif;
+    --dourado: #cdb450;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--fonte-menu-titulo);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 2vh;
+    text-align: justify;
+}
+
+body {
+    background-color: #1A1A1A;
+
+}
+
+.apresentacao {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 64px;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+.apresentandoEmpresa {
+    margin-left: 30px;
+    margin-top: 100px;
+}
+
+
+
+
+.historia {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+    margin-bottom: 10px;
+}
+.historia p {
+    margin-left: 30px;
+    margin-top: 100px;
+}
+.FotoNossa {
+    background-image: url(./imagens/ombro-a-ombro.jpg);
+    background-position: center top 40%;
+    background-size: cover;
+    width: 558px;
+    height: 394px;
+    margin-top: 50px;
+    margin-left: 64px;
+    border-radius: 30px;
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+}
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Notebooks */
+@media (max-width: 1200px) {
+    .apresentacao {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .apresentandoEmpresa {
+        margin-left: 25px;
+        margin-top: 60px;
+    }
+
+    .historia {
+        gap: 20px;
+    }
+
+    .historia p {
+        margin-left: 20px;
+        margin-top: 60px;
+    }
+
+    .FotoNossa {
+        width: 45%;
+        height: 350px;
+        margin-left: 40px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .apresentacao {
+        margin: 35px 25px;
+        gap: 20px;
+    }
+
+    .apresentandoEmpresa {
+        margin: 30px 0 0 15px;
+    }
+
+    .historia {
+        gap: 15px;
+        margin: 30px 25px;
+    }
+
+    .historia p {
+        margin: 30px 0 0 15px;
+    }
+
+    .FotoNossa {
+        width: 45%;
+        height: 280px;
+        margin-left: 20px;
+        background-position: center 40%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    * {
+        font-size: 16px;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 25px 18px;
+        gap: 15px;
+    }
+
+    .apresentandoEmpresa {
+        margin: 10px 0 0;
+    }
+
+    .historia {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 30px 18px;
+        gap: 15px;
+    }
+
+    .historia p {
+        margin: 10px 0 0;
+    }
+
+    .FotoNossa {
+        width: 100%;
+        height: 260px;
+        margin: 20px 0 0;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center 40%;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 380px) {
+    .apresentacao,
+    .historia {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .apresentandoEmpresa,
+    .historia p {
+        font-size: 15px;
+    }
+
+    .FotoNossa {
+        height: 220px;
+        border-radius: 15px;
+    }
+}

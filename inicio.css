@@ -1,0 +1,128 @@
+:root{
+    --fonte-menu-titulo: "Alegreya Sans", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1A1A1A;
+    
+}
+.pagina-peaky {
+    width: 100%;
+    display: flex;
+    background-color: #191919;
+    color: white;
+    font-family: "Alegreya Sans", sans-serif;
+        opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1),
+        box-shadow .35s ease,
+        opacity .35s ease,
+        filter .35s ease;
+}
+
+.pagina-peaky .conteudo {
+    width: 64%;
+    padding: 50px 3.1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pagina-peaky .informacoes {
+    max-width: 700px;
+}
+
+.pagina-peaky h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.pagina-peaky .descricao {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 65px;
+}
+
+.pagina-peaky .assistir {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 65px;
+}
+.pagina-peaky .assistir a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pagina-peaky .creditos {
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.pagina-peaky .creditos p {
+    margin-bottom: 12px;
+}
+
+.pagina-peaky footer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    color: #555;
+}
+
+
+.pagina-peaky .imagem {
+    width: 50%;
+    min-height: calc(100vh - 60px);
+    background-image: url(./imagens/index-img/imagem-capa.png),
+        linear-gradient(to right, #191919 0%, transparent 35%);
+    background-size: cover;
+    background-position: center;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 650px) {
+
+    .pagina-peaky {
+        flex-direction: column-reverse;
+    }
+
+    .pagina-peaky .conteudo {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .pagina-peaky .imagem {
+        width: 100%;
+        min-height: 400px;
+        background-position: center 1%;
+        background-image: url(./imagens/capa-celular.png),
+                linear-gradient(to right, #191919 0%, transparent 35%);
+    background-size: cover;
+    }
+
+}
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

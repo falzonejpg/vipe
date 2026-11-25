@@ -1,0 +1,270 @@
+:root {
+    --fundo: #1A1A1A;
+    --header: #7C6300;
+    --dourado: #B89A28;
+    --dourado-claro: #cdb450;
+    --fonte-titulo: "Alegreya Sans SC", sans-serif;
+    --fonte-texto: "Figtree", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: var(--fonte-texto);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+    width: 100%;
+    height: 78px;
+    background-color: var(--header);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header img {
+    height: 78px;
+}
+
+/* ---------- Conteúdo ---------- */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 140px 20px 60px;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 1px;
+    color: var(--dourado);
+}
+
+.subtitulo {
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 392px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Campos ---------- */
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 35px;
+    padding: 0 18px;
+    margin-bottom: 19px;
+    border: 1px solid var(--dourado);
+    border-radius: 10px;
+    color: var(--dourado);
+    cursor: text;
+    transition: box-shadow .25s ease, border-color .25s ease, transform .25s ease;
+}
+
+.campo svg,
+.campo img {
+    width: 24px;
+    height: 24px;
+    flex: none;
+    object-fit: contain;
+}
+
+.campo input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+}
+
+.campo input::placeholder {
+    color: var(--dourado);
+    opacity: 1;
+}
+
+/* o campo inteiro acende quando o input está em foco */
+.campo:focus-within {
+    border-color: var(--dourado-claro);
+    box-shadow: 0 0 0 3px rgba(184, 154, 40, .25);
+    transform: translateY(-2px);
+}
+
+/* ---------- Botões ---------- */
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    font-family: var(--fonte-texto);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+a {
+    text-decoration: none;
+}
+#botao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: grey;
+}
+
+.entrar {
+    height: 42px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--dourado);
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.entrar:hover {
+    transform: translateY(-3px) scale(1.02);
+    background-color: var(--dourado-claro);
+    box-shadow: 0 10px 24px rgba(184, 154, 40, .35);
+}
+
+.entrar:active {
+    transform: translateY(0) scale(.98);
+}
+
+.voltar {
+    height: 42px;
+    border: 1px solid var(--dourado);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--dourado);
+    font-size: 15px;
+}
+
+.voltar svg {
+    width: 28px;
+    height: 28px;
+    transition: transform .25s ease;
+}
+
+.voltar:hover {
+    background-color: var(--dourado);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.voltar:hover svg {
+    transform: translateX(-4px);
+}
+
+.entrar:focus-visible,
+.voltar:focus-visible {
+    outline: 3px solid var(--dourado-claro);
+    outline-offset: 3px;
+}
+
+/* ---------- Divisor "OU" ---------- */
+.divisor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 22px 0;
+    color: var(--dourado);
+    font-size: 13px;
+}
+
+.divisor span {
+    flex: 1;
+    height: 2px;
+    background: var(--dourado);
+}
+
+.divisor p {
+    color: var(--dourado);
+}
+
+/* ---------- Termos ---------- */
+.termos {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.termos a {
+    color: var(--dourado);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.termos a:hover {
+    color: var(--dourado-claro);
+    text-decoration: underline;
+}
+
+/* ---------- Animação de entrada ---------- */
+.anima {
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 90ms);
+}
+
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 500px) {
+    .login {
+        padding-top: 80px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .anima {
+        animation: none;
+        opacity: 1;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
