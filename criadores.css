@@ -12,6 +12,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: default;
 }
 
 body {
@@ -40,8 +41,11 @@ body {
     opacity: 0;
     animation: entrar .6s ease forwards;
     animation-delay: calc(var(--i) * 70ms);
+    font-size: 20px;
 }
-
+.Sociais h2 {
+    font-family: 25px;
+}
 
 .insta {
     color: white;
@@ -87,11 +91,13 @@ p {
     gap: 5px;
     font-size: 3vh;
 
+
 }
 
 a {
     text-decoration: none;
     color: #cdb450;
+    cursor: pointer;
 }
 
 .vida {
@@ -120,14 +126,14 @@ a {
 footer {
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     opacity: 0;
     animation: entrar .6s ease forwards;
     animation-delay: calc(var(--i) * 70ms);
-    background-image: url(./imagens/fotoparonamica.jpg);
+    background-image: url(./imagens/fotoparonamica.png);
     background-size: cover;
-    background-position: bottom;
+    background-position: center 70%;
 }
 
 
@@ -143,10 +149,27 @@ footer {
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
 .Zap {
     margin-bottom: 20px;
 }
+.link {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-size: 25px;
+}
+footer {
+    background-size: cover;
+    background-position: center;
 
+}
+.Sociais {
+        font-size: 18px;
+align-items: start;      
+  width: 100vw;
+
+}
 
 }
