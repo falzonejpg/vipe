@@ -17,7 +17,19 @@ html {
 body {
     background-color: #1A1A1A;
 }
-
+#botao-inicio {
+ position: fixed;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    margin-left: -50px;
+}
 .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -95,6 +107,19 @@ body {
         row-gap: 50px;
         padding: 40px;
     }
+    #botao-inicio {
+ position: fixed;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    margin-left: 0px;
+}
 
 }
 
@@ -104,6 +129,19 @@ body {
         grid-template-columns: 1fr;
         padding: 24px;
     }
+    #botao-inicio {
+ position: fixed;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    margin-left: 0px;
+}
 
 
 }
