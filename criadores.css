@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    min-height: 100vh                                                                                       ;
+    min-height:100vh;
     background-color: #1A1A1A;
 
 }
@@ -32,8 +32,12 @@ body {
     opacity: 0;
     animation: entrar .6s ease forwards;
     animation-delay: calc(var(--i) * 70ms);
+    text-align:center;
+    
 }
-
+.textoEquipe p::after {
+    content: "A VIPE é uma produtora cinematográfica fictícia criada por Vinicius Serafim e Pedro Falzone, alunos da ETEC Aristóteles Ferreira, localizada em Santos – SP, durante o ano de 2026, como parte de um projeto escolar. Nossa proposta é representar uma empresa dedicada à criação e produção de filmes, explorando diferentes gêneros cinematográficos, como ação, terror, suspense e ficção científica. Nosso principal destaque em cartaz é Peaky Blinders, uma produção de destaque em nosso catálogo, escolhida por sua atmosfera marcante, narrativa envolvente e personagens memoráveis. Fundada com base na criatividade, inovação e paixão pelo cinema, a VIPE Produções busca desenvolver histórias envolventes e experiências marcantes para o público. O projeto surgiu como uma oportunidade de colocar em prática nossos conhecimentos de programação, design e desenvolvimento web, unindo nossas ideias e habilidades para construir a identidade digital da nossa própria produtora de filmes."
+}
 
 .Sociais {
     padding: 40px 0;
@@ -102,7 +106,9 @@ a {
 
 .vida {
     padding: 70px 70px 54px;
+    margin-right: 500px;
     min-height: 301px;
+    text-align: justify;
     opacity: 0;
     animation: entrar .6s ease forwards;
     animation-delay: calc(var(--i) * 70ms);
@@ -121,6 +127,11 @@ a {
     opacity: 0;
     animation: entrar .6s ease forwards;
     animation-delay: calc(var(--i) * 70ms);
+     border-right: 2px solid #cdb450; padding-right: 20px;
+
+}
+.vida p::after {
+    content: "Somos Vinicius Serafim e Pedro Falzone, estudantes da ETEC Aristóteles Ferreira, em Santos, no ano de 2026. Compartilhamos o interesse por tecnologia, programação, cinema e criatividade. Na VIPE Productions, dividimos igualmente todas as responsabilidades, participando juntos de cada etapa do projeto. Pedro se destaca na programação e escrita de códigos, enquanto Vinicius possui maior habilidade na produção fotográfica. Juntos, unimos nossos conhecimentos e ideias para transformar um trabalho escolar em uma experiência de criação de uma produtora fictícia de filmes.";
 }
 
 footer {
@@ -150,7 +161,10 @@ footer {
 }
 
 @media (max-width: 767px){
-.Zap {
+.textoEquipe p::after {
+    content: "A VIPE Productions é uma produtora cinematográfica fictícia criada por Vinicius Serafim e Pedro Falzone, alunos da ETEC Aristóteles Ferreira, em 2026. Com foco em diversos gêneros cinematográficos e destaque para Peaky Blinders, o projeto une criatividade e paixão pelo cinema, colocando em prática conhecimentos de programação, design e desenvolvimento web."
+}
+    .Zap {
     margin-bottom: 20px;
 }
 .link {
@@ -171,5 +185,15 @@ align-items: start;
   width: 100vw;
 
 }
-
+.vida p {
+    border-right: 0;
+     padding-right: 0;
+     margin-right: 0;
+}
+.vida {
+    margin-right: 0;
+}
+.vida p::after {
+    content: "Vinicius Serafim e Pedro Falzone trabalham juntos em todas as etapas da VIPE Productions, dividindo igualmente as responsabilidades e decisões. Ambos participam da criação, organização e desenvolvimento dos projetos. Pedro se destaca na programação e na escrita de códigos, enquanto Vinicius possui maior habilidade na produção e edição de fotografias. Assim, unem suas habilidades para desenvolver ideias e construir juntos cada parte da produtora.";
+}
 }
