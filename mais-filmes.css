@@ -17,8 +17,6 @@ html {
 body {
     background-color: #1A1A1A;
 }
-#botao-inicio {
-
 .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
