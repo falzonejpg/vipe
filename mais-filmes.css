@@ -142,7 +142,171 @@ body {
     z-index: 1000;
     margin-left: 0px;
 }
+#botao-inicio a {
+    padding: 5px;
+}
 
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .filme {
+        animation: none;
+        opacity: 1;
+    }
+
+    .filme,
+    .filme img {
+        transition: none;
+    }
+}
+:root {
+    --fonte-menu-titulo: "Alegreya Sans", sans-serif;
+    --dourado: #cdb450;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+}
+#botao-inicio {
+ position: fixed;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    margin-left: -50px;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 97px;
+    padding: 60px 70px 100px;
+}
+
+.filme {
+    display: block;
+    aspect-ratio: 395 / 241;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+
+
+    opacity: 0;
+    animation: entrar .6s ease forwards;
+    animation-delay: calc(var(--i) * 70ms);
+
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1),
+        box-shadow .35s ease,
+        opacity .35s ease,
+        filter .35s ease;
+}
+
+.filme img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+.filme:hover,
+.filme:focus-visible {
+    transform: scale(1.06);
+    z-index: 2;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .6),
+        0 0 0 2px var(--dourado);
+    outline: none;
+}
+
+.filme:hover img,
+.filme:focus-visible img {
+    transform: scale(1.04);
+
+}
+
+
+.galeria:hover .filme:not(:hover) {
+    opacity: .55;
+    filter: saturate(.7);
+}
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 50px;
+        padding: 40px;
+    }
+    #botao-inicio {
+ position: fixed;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    margin-left: 0px;
+}
+
+}
+
+@media (max-width: 600px) {
+    .galeria {
+                margin-top: 20px;
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+    #botao-inicio {
+ position: fixed;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    margin-left: 0px;
+}
+#botao-inicio a {
+    padding: 5px;
+}
 
 }
 
